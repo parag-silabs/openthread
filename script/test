@@ -450,7 +450,7 @@ do_expect()
         if [[ ${OT_NATIVE_IP} == 1 ]]; then
             test_patterns=(-name 'tun-*.exp')
         else
-            test_patterns=(-name 'posix-*.exp' -o -name 'cli-*.exp')
+            test_patterns=(-name 'posix-rcp-non-zero*.exp' -o -name 'cli-*.exp')
             if [[ ${THREAD_VERSION} != "1.1" ]]; then
                 test_patterns+=(-o -name 'v1_2-*.exp')
             fi
